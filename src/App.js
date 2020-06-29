@@ -5,7 +5,7 @@ import { NavbarBrand } from 'reactstrap';
 import Menu from './components/MenuComponent';
 
 import {DISHES} from './shared/dishes'
-import { render } from '@testing-library/react';
+//import { render } from '@testing-library/react';
 
 class App extends Component {
 
