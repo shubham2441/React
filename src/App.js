@@ -3,8 +3,11 @@ import { Navbar } from 'reactstrap';
 import './App.css';
 import { NavbarBrand } from 'reactstrap';
 import Menu from './components/MenuComponent';
+//import DishDetails from './components/DishDetailsComponents';
 
 import {DISHES} from './shared/dishes'
+import {COMMENTS} from './shared/comments'
+
 //import { render } from '@testing-library/react';
 
 class App extends Component {
@@ -13,7 +16,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      dishes: DISHES
+      dishes: DISHES,
+      comments : COMMENTS
     };
   }
     render() {
@@ -24,7 +28,8 @@ class App extends Component {
               <NavbarBrand href = "/">Ristronte Con Fusion</NavbarBrand>
             </div>
           </Navbar>
-          <Menu dishes={this.state.dishes}/>
+          <Menu dishes={this.state.dishes} comments={this.state.comments}/>
+          {/* <DishDetails dish = {this.state.dish}/> */}
         </div>
       );
     }
